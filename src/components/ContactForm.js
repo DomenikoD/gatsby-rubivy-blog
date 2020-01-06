@@ -234,7 +234,7 @@ class ContactForm extends React.Component {
 				<Submit name="submit" type="submit" value="Pošaljite" />
 
 				<Modal visible={this.state.showModal}>
-					<p>Thank you for reaching out. I will get back to you as soon as possible.</p>
+					<p>Hvala na kontaktu, javiti ću Vam se čim prije.</p>
 					<Button onClick={this.closeModal}>Okay</Button>
 				</Modal>
 			</Form>
