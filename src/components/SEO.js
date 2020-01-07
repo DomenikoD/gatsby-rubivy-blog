@@ -117,6 +117,19 @@ class SEO extends Component {
       })
     }
 
+    const injectGA = () => {
+      if (typeof window == 'undefined') {
+        return
+      }
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        window.dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-B5GJNKM390')
+    }
+
     return (
       <Helmet>
         {/* General tags */}
@@ -127,6 +140,12 @@ class SEO extends Component {
         <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSONLD)}
         </script>
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-B5GJNKM390"
+        />
+        <script>{injectGA()}</script>
 
         {/* OpenGraph tags */}
         <meta property="og:title" content={title} />
