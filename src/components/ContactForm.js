@@ -226,7 +226,7 @@ class ContactForm extends React.Component {
 				<Message
 					name="message"
 					type="text"
-					placeholder="Vaša poruka..."
+					placeholder="Vaša poruka ..."
 					value={this.state.message}
 					onChange={this.handleInputChange}
 					required
